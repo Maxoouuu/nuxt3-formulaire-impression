@@ -1,5 +1,8 @@
 <template>
     <div>
+        <button @click="printContent" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">
+            Imprimer
+        </button>
         <div id="printable" class="p-4 text-sm bg-white max-w-2xl mx-auto shadow-md break-words">
             <h1>
                 Traitement de données à caractère personnel Information et consentement
@@ -106,9 +109,7 @@
             </p>
         </div>
 
-        <button @click="printContent" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">
-            Imprimer
-        </button>
+
     </div>
 </template>
   
@@ -144,7 +145,6 @@ const printContent = () => {
             #signature {
                 display: flex;
                 justify-content: space-between;
-                
             }
             #indication {
                 font-size: 0.8rem;
@@ -152,7 +152,6 @@ const printContent = () => {
                 text-align: right;
                 margin-top: -0.5rem;
             }
-            
           </style>
         </head>
         <body onload="window.print();window.close()">${printContentElement}</body>
