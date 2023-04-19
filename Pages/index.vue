@@ -1,7 +1,6 @@
 <template>
     <div>
-      <PrintForm />
-      <PrintableForm />
+        <Printable />
     </div>
-  </template>
+</template>
   
